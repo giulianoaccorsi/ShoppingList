@@ -1,0 +1,22 @@
+
+## Generate constants for your localized strings.
+##   Be sure that SwiftGen only parses ONE locale (typically Base.lproj, or en.lproj, or whichever your development region is); otherwise it will generate the same keys multiple times.
+##   SwiftGen will parse all `.strings` files found in that folder.
+strings:
+  inputs:
+    - ShoppingList/Helpers/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: ShoppingList/Generated/Strings+Generated.swift
+      params:
+        enumName: Localization
+xcassets:
+  inputs: 
+    - ShoppingList/Resources/Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: ShoppingList/Generated/Colors.swift
+    params:
+      enumName: Colors
+## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
+## https://github.com/SwiftGen/SwiftGen/tree/6.6.2/Documentation/
