@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1911E7F328E294A600D8C86F /* LoggedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911E7EC28E294A600D8C86F /* LoggedFactory.swift */; };
+		1911E7F428E294A600D8C86F /* LoggedScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911E7ED28E294A600D8C86F /* LoggedScenarios.swift */; };
+		1911E7F528E294A600D8C86F /* LoggedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911E7EE28E294A600D8C86F /* LoggedPresenter.swift */; };
+		1911E7F628E294A600D8C86F /* LoggedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911E7EF28E294A600D8C86F /* LoggedWorker.swift */; };
+		1911E7F828E294A600D8C86F /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911E7F128E294A600D8C86F /* LoggedViewController.swift */; };
+		1911E7F928E294A600D8C86F /* LoggedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911E7F228E294A600D8C86F /* LoggedInteractor.swift */; };
 		19231E4C28DDF463002E1D34 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19231E4B28DDF463002E1D34 /* CustomTextfield.swift */; };
 		19231E4E28DDF87E002E1D34 /* NSMutableAttributedString+Custom Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19231E4D28DDF87E002E1D34 /* NSMutableAttributedString+Custom Init.swift */; };
 		193108BF28DE1BD7009969B6 /* StageRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193108BE28DE1BD7009969B6 /* StageRegister.swift */; };
@@ -34,6 +40,8 @@
 		1944191828DF96040040EB8F /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944191728DF96040040EB8F /* AddressModel.swift */; };
 		1944191A28DFA4B00040EB8F /* loading-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1944191928DFA4B00040EB8F /* loading-lottie.json */; };
 		1944191C28DFA78E0040EB8F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944191B28DFA78E0040EB8F /* LoadingView.swift */; };
+		1964295828E3652100C8829E /* LoggedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1964295728E3652100C8829E /* LoggedCollectionViewDataSource.swift */; };
+		1964295A28E3673900C8829E /* LoggedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1964295928E3673900C8829E /* LoggedCell.swift */; };
 		19807CFF28DD7C3B006C82D2 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19807CFE28DD7C3B006C82D2 /* HomeInteractor.swift */; };
 		19807D0128DD7C8A006C82D2 /* HomeScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19807D0028DD7C8A006C82D2 /* HomeScenarios.swift */; };
 		19807D0328DD7D8A006C82D2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19807D0228DD7D8A006C82D2 /* HomePresenter.swift */; };
@@ -63,7 +71,6 @@
 		19CA733328E13C32006C9FE2 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA732C28E13C32006C9FE2 /* LoginInteractor.swift */; };
 		19D23F5728DE123A0051D6E8 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D23F5628DE123A0051D6E8 /* String+Regex.swift */; };
 		19DBC7DE28DD64A800217CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DBC7DD28DD64A800217CFF /* AppDelegate.swift */; };
-		19DBC7E028DD64A800217CFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DBC7DF28DD64A800217CFF /* SceneDelegate.swift */; };
 		19DBC7E228DD64A800217CFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DBC7E128DD64A800217CFF /* HomeViewController.swift */; };
 		19DBC7E728DD64A900217CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DBC7E628DD64A900217CFF /* Assets.xcassets */; };
 		19DBC7EA28DD64A900217CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DBC7E828DD64A900217CFF /* LaunchScreen.storyboard */; };
@@ -81,9 +88,16 @@
 		19FF105E28E0FEAE0022740E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 19FF105D28E0FEAE0022740E /* FirebaseFirestoreSwift */; };
 		19FF106028E0FEAE0022740E /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 19FF105F28E0FEAE0022740E /* FirebaseRemoteConfigSwift */; };
 		19FF106328E102170022740E /* FirebaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF106228E102170022740E /* FirebaseNetwork.swift */; };
+		19FFAEAB28E371600088DEE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DBC7DF28DD64A800217CFF /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1911E7EC28E294A600D8C86F /* LoggedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedFactory.swift; sourceTree = "<group>"; };
+		1911E7ED28E294A600D8C86F /* LoggedScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedScenarios.swift; sourceTree = "<group>"; };
+		1911E7EE28E294A600D8C86F /* LoggedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedPresenter.swift; sourceTree = "<group>"; };
+		1911E7EF28E294A600D8C86F /* LoggedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedWorker.swift; sourceTree = "<group>"; };
+		1911E7F128E294A600D8C86F /* LoggedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedViewController.swift; sourceTree = "<group>"; };
+		1911E7F228E294A600D8C86F /* LoggedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInteractor.swift; sourceTree = "<group>"; };
 		19231E4B28DDF463002E1D34 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		19231E4D28DDF87E002E1D34 /* NSMutableAttributedString+Custom Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Custom Init.swift"; sourceTree = "<group>"; };
 		193108BE28DE1BD7009969B6 /* StageRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageRegister.swift; sourceTree = "<group>"; };
@@ -110,6 +124,8 @@
 		1944191728DF96040040EB8F /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		1944191928DFA4B00040EB8F /* loading-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-lottie.json"; sourceTree = "<group>"; };
 		1944191B28DFA78E0040EB8F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1964295728E3652100C8829E /* LoggedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		1964295928E3673900C8829E /* LoggedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedCell.swift; sourceTree = "<group>"; };
 		19807CFE28DD7C3B006C82D2 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		19807D0028DD7C8A006C82D2 /* HomeScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScenarios.swift; sourceTree = "<group>"; };
 		19807D0228DD7D8A006C82D2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -173,6 +189,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1911E7FA28E294AB00D8C86F /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				1911E7EC28E294A600D8C86F /* LoggedFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		194418E328DF7DEB0040EB8F /* CEP */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,8 +308,24 @@
 		195B051E28E148DD005705B9 /* Logged */ = {
 			isa = PBXGroup;
 			children = (
+				1964295628E364F400C8829E /* View */,
+				1911E7FA28E294AB00D8C86F /* Factory */,
+				1911E7ED28E294A600D8C86F /* LoggedScenarios.swift */,
+				1911E7EE28E294A600D8C86F /* LoggedPresenter.swift */,
+				1911E7EF28E294A600D8C86F /* LoggedWorker.swift */,
+				1911E7F128E294A600D8C86F /* LoggedViewController.swift */,
+				1911E7F228E294A600D8C86F /* LoggedInteractor.swift */,
 			);
 			path = Logged;
+			sourceTree = "<group>";
+		};
+		1964295628E364F400C8829E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1964295728E3652100C8829E /* LoggedCollectionViewDataSource.swift */,
+				1964295928E3673900C8829E /* LoggedCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		19807D0428DD7E83006C82D2 /* Factory */ = {
@@ -652,6 +692,7 @@
 				199AC0E428DF68F5006A692D /* CPFScenarios.swift in Sources */,
 				1944190E28DF950C0040EB8F /* AddressFactory.swift in Sources */,
 				19CA733328E13C32006C9FE2 /* LoginInteractor.swift in Sources */,
+				1911E7F428E294A600D8C86F /* LoggedScenarios.swift in Sources */,
 				194418EB28DF7E1D0040EB8F /* CEPFactory.swift in Sources */,
 				19DBC7E228DD64A800217CFF /* HomeViewController.swift in Sources */,
 				194418EC28DF7E1D0040EB8F /* CEPScenarios.swift in Sources */,
@@ -659,7 +700,9 @@
 				19807D1428DD7FD9006C82D2 /* RegisterViewController.swift in Sources */,
 				19DBC7DE28DD64A800217CFF /* AppDelegate.swift in Sources */,
 				194418F128DF7E1D0040EB8F /* CEPInteractor.swift in Sources */,
+				1964295828E3652100C8829E /* LoggedCollectionViewDataSource.swift in Sources */,
 				19231E4C28DDF463002E1D34 /* CustomTextfield.swift in Sources */,
+				1964295A28E3673900C8829E /* LoggedCell.swift in Sources */,
 				19FDC8AF28DD7439009C5798 /* UIColor+Custom.swift in Sources */,
 				199AC0EC28DF6DEF006A692D /* CPFModel.swift in Sources */,
 				19FF105228E0F9000022740E /* PasswordViewController.swift in Sources */,
@@ -669,14 +712,16 @@
 				199AC0F928DF70E2006A692D /* CellphoneScenarios.swift in Sources */,
 				193108CA28DE58E8009969B6 /* Cep.swift in Sources */,
 				19231E4E28DDF87E002E1D34 /* NSMutableAttributedString+Custom Init.swift in Sources */,
+				1911E7F628E294A600D8C86F /* LoggedWorker.swift in Sources */,
 				19FF106328E102170022740E /* FirebaseNetwork.swift in Sources */,
 				199AC10228DF714F006A692D /* CellphoneModel.swift in Sources */,
 				1944191C28DFA78E0040EB8F /* LoadingView.swift in Sources */,
+				19FFAEAB28E371600088DEE0 /* SceneDelegate.swift in Sources */,
 				19FF104D28E0F9000022740E /* PasswordFactory.swift in Sources */,
+				1911E7F928E294A600D8C86F /* LoggedInteractor.swift in Sources */,
 				19CA733228E13C32006C9FE2 /* LoginViewController.swift in Sources */,
 				199AC0E828DF68F5006A692D /* CPFViewController.swift in Sources */,
 				19807D1128DD7FD9006C82D2 /* RegisterPresenter.swift in Sources */,
-				19DBC7E028DD64A800217CFF /* SceneDelegate.swift in Sources */,
 				194418FC28DF8B470040EB8F /* GetRequestable.swift in Sources */,
 				19807D0328DD7D8A006C82D2 /* HomePresenter.swift in Sources */,
 				19807D0628DD7E8A006C82D2 /* HomeFactory.swift in Sources */,
@@ -688,10 +733,13 @@
 				1944191128DF950C0040EB8F /* AddressWorker.swift in Sources */,
 				199AC0FA28DF70E2006A692D /* CellphonePresenter.swift in Sources */,
 				19FF105028E0F9000022740E /* PasswordWorker.swift in Sources */,
+				1911E7F828E294A600D8C86F /* LoggedViewController.swift in Sources */,
 				194418ED28DF7E1D0040EB8F /* CEPPresenter.swift in Sources */,
 				19FF104F28E0F9000022740E /* PasswordPresenter.swift in Sources */,
 				19FF105328E0F9000022740E /* PasswordInteractor.swift in Sources */,
+				1911E7F528E294A600D8C86F /* LoggedPresenter.swift in Sources */,
 				1944191028DF950C0040EB8F /* AddressPresenter.swift in Sources */,
+				1911E7F328E294A600D8C86F /* LoggedFactory.swift in Sources */,
 				19CA732F28E13C32006C9FE2 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,6 @@ import UIKit
 
 protocol PasswordViewControllerProtocol: AnyObject {
     func displayRegisterUser(viewModel: Password.FinishRegister.ViewModel)
-    func displayError(viewModel: Password.FailedError.ViewModel)
 }
 
 final class PasswordViewController: UIViewController {
@@ -141,25 +140,27 @@ extension PasswordViewController: CustomTextfieldProtocol {
 }
 
 extension PasswordViewController: PasswordViewControllerProtocol {
-    func displayError(viewModel: Password.FailedError.ViewModel) {
-        let alert = UIAlertController(title: "Erro",
-                                      message: viewModel.errorMessage,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.dismiss(animated: true)
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-
     func displayRegisterUser(viewModel: Password.FinishRegister.ViewModel) {
-        let alert = UIAlertController(title: "Cadastro",
-                                      message: "Seu cadastro foi concluido com sucesso! 😊",
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.dismiss(animated: true)
+        switch viewModel {
+        case .sucess:
+            let alert = UIAlertController(title: "Cadastro",
+                                          message: "Seu cadastro foi concluido com sucesso! 😊",
+                                          preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+                self.dismiss(animated: true)
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true)
+
+        case .failure(error: let error):
+            let alert = UIAlertController(title: "Erro",
+                                          message: error,
+                                          preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+                self.dismiss(animated: true)
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true)
         }
-        alert.addAction(okAction)
-        present(alert, animated: true)
     }
 }

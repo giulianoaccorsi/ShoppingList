@@ -44,8 +44,8 @@ class CustomTextfield: UIView {
 
     private let textField: UITextField = {
         let textfield = UITextField()
-        textfield.leftViewMode = .always
         textfield.clearButtonMode = .whileEditing
+        textfield.autocapitalizationType = .none
         textfield.translatesAutoresizingMaskIntoConstraints = false
 
         return textfield

@@ -8,20 +8,20 @@
 import UIKit
 
 protocol PasswordPresenterProtocol {
-    func presentSuccess(response: Password.FinishRegister.Response)
-    func presentError(response: Password.FailedError.Response)
+    func presentRegisterUser(response: Password.FinishRegister.Response)
 }
 
 final class PasswordPresenter: PasswordPresenterProtocol {
     weak var viewController: PasswordViewControllerProtocol?
 
-    func presentSuccess(response: Password.FinishRegister.Response) {
-        let viewModel = Password.FinishRegister.ViewModel()
-        viewController?.displayRegisterUser(viewModel: viewModel)
-    }
-
-    func presentError(response: Password.FailedError.Response) {
-        let viewModel = Password.FailedError.ViewModel(errorMessage: response.error.localizedDescription)
-        viewController?.displayError(viewModel: viewModel)
+    func presentRegisterUser(response: Password.FinishRegister.Response) {
+        switch response {
+        case .sucess(user: _):
+            let viewModel = Password.FinishRegister.ViewModel.sucess
+            viewController?.displayRegisterUser(viewModel: viewModel)
+        case .failure(error: let error):
+            let viewModel = Password.FinishRegister.ViewModel.failure(error: error.localizedDescription)
+            viewController?.displayRegisterUser(viewModel: viewModel)
+        }
     }
 }

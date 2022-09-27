@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "icons8--364-25-ff2e00.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

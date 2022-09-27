@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 // swiftlint: disable nesting
 enum Password {
@@ -13,18 +14,13 @@ enum Password {
         struct Request {
             let password: String
         }
-        struct Response {
+        enum Response {
+            case sucess(user: User)
+            case failure(error: FirebaseAuthError)
         }
-        struct ViewModel {
-        }
-    }
-    enum FailedError {
-        struct Request {}
-        struct Response {
-            let error: FirebaseAuthError
-        }
-        struct ViewModel {
-            let errorMessage: String
+        enum ViewModel {
+            case sucess
+            case failure(error: String)
         }
     }
 }

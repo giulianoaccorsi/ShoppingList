@@ -25,11 +25,11 @@ final class LoginInteractor: LoginInteractorProtocol {
             guard let self else { return }
             switch result {
             case .success(let user):
-                let request = Login.Firebase.Response()
+                let request = Login.Firebase.Response.success(user: user)
                 self.presenter.presentHome(response: request)
             case .failure(let error):
-                let request = Login.Error.Response(message: error.localizedDescription)
-                self.presenter.presentError(response: request)
+                let request = Login.Firebase.Response.failure(error: error)
+                self.presenter.presentHome(response: request)
             }
         }
     }

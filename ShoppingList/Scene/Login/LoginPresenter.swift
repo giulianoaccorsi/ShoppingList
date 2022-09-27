@@ -9,19 +9,19 @@ import UIKit
 
 protocol LoginPresenterProtocol {
     func presentHome(response: Login.Firebase.Response)
-    func presentError(response: Login.Error.Response)
 }
 
 final class LoginPresenter: LoginPresenterProtocol {
     weak var viewController: LoginViewControllerProtocol?
 
     func presentHome(response: Login.Firebase.Response) {
-        let viewModel = Login.Firebase.ViewModel()
-        viewController?.displayHome(viewModel: viewModel)
-    }
-
-    func presentError(response: Login.Error.Response) {
-        let viewModel = Login.Error.ViewModel(message: response.message)
-        viewController?.displayError(viewModel: viewModel)
+        switch response {
+        case .success(user: _):
+            let viewModel = Login.Firebase.ViewModel.success
+            viewController?.displayHome(viewModel: viewModel)
+        case .failure(error: let error):
+            let viewModel = Login.Firebase.ViewModel.failure(error: error.localizedDescription)
+            viewController?.displayHome(viewModel: viewModel)
+        }
     }
 }

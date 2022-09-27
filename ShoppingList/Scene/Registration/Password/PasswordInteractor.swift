@@ -26,12 +26,12 @@ final class PasswordInteractor: PasswordInteractorProtocol {
         worker.createUser(email: model.email, password: request.password, model: model) { [weak self] result in
             guard let self else { return }
             switch result {
-            case .success(_):
-                let response = Password.FinishRegister.Response()
-                self.presenter.presentSuccess(response: response)
+            case .success(let user):
+                let response = Password.FinishRegister.Response.sucess(user: user)
+                self.presenter.presentRegisterUser(response: response)
             case .failure(let error):
-                let response = Password.FailedError.Response(error: error)
-                self.presenter.presentError(response: response)
+                let response = Password.FinishRegister.Response.failure(error: error)
+                self.presenter.presentRegisterUser(response: response)
             }
         }
     }

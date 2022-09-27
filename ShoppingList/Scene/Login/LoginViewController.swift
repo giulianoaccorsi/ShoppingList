@@ -9,11 +9,9 @@ import UIKit
 
 protocol LoginViewControllerProtocol: AnyObject {
     func displayHome(viewModel: Login.Firebase.ViewModel)
-    func displayError(viewModel: Login.Error.ViewModel)
 }
 
 final class LoginViewController: UIViewController {
-
     private lazy var continueButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitle("Fazer Login", for: .normal)
@@ -143,18 +141,22 @@ extension LoginViewController: CustomTextfieldProtocol {
 }
 extension LoginViewController: LoginViewControllerProtocol {
     func displayHome(viewModel: Login.Firebase.ViewModel) {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .cyan
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: true)
-    }
-
-    func displayError(viewModel: Login.Error.ViewModel) {
-        let alert = UIAlertController(title: "Erro :(",
-                                      message: viewModel.message,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in}
-        alert.addAction(okAction)
-        self.present(alert, animated: true)
+        switch viewModel {
+        case .success:
+            let viewController = LoggedFactory.make()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.navigationBar.prefersLargeTitles = true
+            navigationController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:
+                                                                            UIColor.title ?? UIColor()]
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: true)
+        case .failure(error: let errorString):
+            let alert = UIAlertController(title: "Erro :(",
+                                          message: errorString,
+                                          preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in}
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
     }
 }
